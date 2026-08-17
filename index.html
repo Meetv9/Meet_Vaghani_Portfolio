@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meet Vaghani — ESG software & data, built to ship</title>
+<title>Meet Vaghani - EcoSetu | CBAM, carbon data & ESG software</title>
+<meta name="description" content="EcoSetu, the carbon, CBAM and ESG practice of Keprin Overseas Corporation, Bhavnagar, India. CBAM compliance and embedded-emissions data for the EU and UK markets, GHG accounting, BRSR reporting, and ESG software. Led by Meet Vaghani.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
@@ -190,9 +191,128 @@
           color:var(--faint);margin-bottom:18px}
   .status i{width:8px;height:8px;border-radius:50%;background:var(--v-green);animation:pulse 2s infinite}
 
-  footer{padding:26px 0 34px;color:var(--faint);font-size:.74rem;font-family:"IBM Plex Mono";text-align:center}
-  footer a{text-decoration:none}
-  footer .prov{margin-top:6px}
+  footer{position:relative;padding:66px 0 42px;color:var(--faint);font-size:.76rem;font-family:"IBM Plex Mono"}
+  .foot-rule{height:2px;background:var(--viridis);border-radius:2px;margin-bottom:46px}
+  .foot-mark{font-family:"Space Grotesk";font-weight:700;letter-spacing:-.035em;line-height:.92;
+             font-size:clamp(3.1rem,13vw,8.5rem);
+             background:var(--viridis);-webkit-background-clip:text;background-clip:text;color:transparent;
+             margin-bottom:12px}
+  .foot-tag{color:var(--body);max-width:54ch;line-height:1.6;margin-bottom:44px}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:30px}
+  @media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:440px){.foot-grid{grid-template-columns:1fr}}
+  .fcol h5{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--v-teal);
+           font-weight:600;margin-bottom:13px}
+  .fcol a{display:block;width:fit-content;color:var(--faint);text-decoration:none;margin:8px 0;
+          transition:color .2s,transform .2s}
+  .fcol a:hover{color:var(--ink);transform:translateX(4px)}
+  .fcol p{margin:8px 0;color:var(--body)}
+  .fclock b{color:var(--v-teal);font-weight:600}
+  .fclock .fdot{color:var(--v-green);animation:pulse 2s infinite}
+  .foot-base{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+             margin-top:46px;padding-top:22px;border-top:1px solid var(--line)}
+  .foot-base a{color:var(--faint);text-decoration:none}
+  .foot-base a:hover{color:var(--ink)}
+  .totop{display:inline-flex;align-items:center;gap:7px;transition:transform .2s}
+  .totop:hover{transform:translateY(-2px)}
+
+  /* ---- hero practice line ---- */
+  .practice{font-family:"IBM Plex Mono";font-size:.78rem;color:var(--faint);margin-top:14px;letter-spacing:.02em}
+
+  /* ---- who we help ---- */
+  .helps{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);
+         background:var(--card);border-radius:12px;overflow:hidden;margin-top:22px}
+  @media(max-width:700px){.helps{grid-template-columns:1fr}}
+  .help{padding:18px 20px;border-right:1px solid var(--line)}
+  .help:last-child{border-right:none}
+  @media(max-width:700px){.help{border-right:none;border-bottom:1px solid var(--line)}
+    .help:last-child{border-bottom:none}}
+  .help .hk{font-family:"IBM Plex Mono";font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;
+            color:var(--v-teal);font-weight:600;margin-bottom:6px}
+  .help p{font-size:.9rem;color:var(--body)}
+
+  /* ---- services (premium cards) ---- */
+  .svc-line{margin-top:46px}
+  .svc-line:first-of-type{margin-top:10px}
+  .lhead{display:flex;align-items:center;gap:14px;font-family:"IBM Plex Mono";font-size:.74rem;
+         letter-spacing:.1em;text-transform:uppercase;color:var(--v-teal);font-weight:600}
+  .lhead::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+  .lintro{color:var(--body);max-width:72ch;font-size:.93rem;margin-top:9px}
+  .smenu{margin-top:20px;display:flex;flex-direction:column;gap:13px}
+
+  .srow{position:relative;border:1px solid var(--line);border-radius:15px;background:var(--card);
+        overflow:hidden;
+        transition:border-color .3s var(--ease),box-shadow .3s var(--ease),transform .3s var(--ease),background .3s}
+  .srow::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--viridis);
+        transform:scaleY(0);transform-origin:top;transition:transform .35s var(--ease)}
+  .srow:hover{border-color:transparent;transform:translateY(-3px);
+        box-shadow:0 18px 40px -20px rgba(33,145,140,.45),0 3px 10px -5px rgba(16,22,20,.14)}
+  .srow:hover::before,.srow[open]::before{transform:scaleY(1)}
+  .srow[open]{border-color:rgba(33,145,140,.5);
+        background:linear-gradient(180deg,rgba(33,145,140,.055),rgba(94,201,98,.02))}
+
+  .srow>summary{list-style:none;cursor:pointer;padding:20px 22px;display:grid;
+                grid-template-columns:auto 1fr auto;gap:6px 18px;align-items:center}
+  .srow>summary::-webkit-details-marker{display:none}
+  .sidx{font-family:"IBM Plex Mono";font-size:.72rem;font-weight:600;color:var(--v-teal);
+        align-self:start;padding-top:5px;opacity:.7;letter-spacing:.02em}
+  .smain{min-width:0;grid-column:2}
+  .sname{font-family:"Space Grotesk";font-size:1.14rem;font-weight:700;letter-spacing:-.015em;color:var(--ink)}
+  .sone{font-size:.9rem;color:var(--body);margin-top:5px;line-height:1.5}
+  .smeta2{display:flex;align-items:center;gap:12px;align-self:start;padding-top:3px}
+  .chip{font-family:"IBM Plex Mono";font-size:.64rem;font-weight:600;padding:.3rem .62rem;border-radius:999px;
+        background:#eef2f0;color:#4a534f;white-space:nowrap;letter-spacing:.02em}
+  .chip.free{background:rgba(94,201,98,.16);color:#25753a}
+  .exp{width:30px;height:30px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;
+       color:var(--v-teal);font-size:1.15rem;line-height:0;flex:none;
+       transition:transform .3s var(--ease),background .25s,color .25s,border-color .25s}
+  .srow>summary:hover .exp{background:var(--v-teal);color:#fff;border-color:var(--v-teal)}
+  .srow[open] .exp{transform:rotate(135deg);background:var(--v-teal);color:#fff;border-color:var(--v-teal)}
+  @media(max-width:560px){.srow>summary{grid-template-columns:auto 1fr;gap:6px 14px}
+    .smeta2{grid-column:2;justify-content:flex-start;margin-top:8px;padding-top:0}}
+
+  .sbody{padding:0 24px 22px 56px;animation:sopen .4s var(--ease)}
+  @keyframes sopen{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+  @media(max-width:560px){.sbody{padding:0 22px 20px 22px}}
+  .sbody .bk{font-family:"IBM Plex Mono";font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;
+             color:var(--v-teal);font-weight:600;margin:6px 0 6px;padding-top:12px;
+             border-top:1px solid var(--line)}
+  .sbody ul{list-style:none;margin:0}
+  .sbody li{padding-left:18px;position:relative;font-size:.9rem;color:var(--body);margin:5px 0}
+  .sbody li::before{content:"▸";position:absolute;left:0;color:var(--v-teal);top:1px;font-size:.72rem}
+  .sfor{font-size:.88rem;color:var(--body);margin-top:2px;line-height:1.55}
+  .sfoot{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:18px}
+  .scta{font-family:"IBM Plex Mono";font-size:.82rem;font-weight:600;color:#fff;
+        background:var(--v-teal);background-image:linear-gradient(120deg,var(--v-teal),var(--v-green));
+        text-decoration:none;border-radius:8px;padding:.55rem 1rem;
+        box-shadow:0 6px 16px -8px rgba(33,145,140,.7);transition:transform .2s,box-shadow .2s}
+  .scta:hover{transform:translateY(-1px);box-shadow:0 10px 22px -8px rgba(33,145,140,.85)}
+  .sbody .plinks{margin:0}
+
+  /* ---- how we work ---- */
+  .flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:24px}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;
+        transition:transform .25s var(--ease), box-shadow .25s var(--ease)}
+  .step:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(16,22,20,.08)}
+  .step .num{font-family:"IBM Plex Mono";font-size:.7rem;color:var(--v-teal);font-weight:600;margin-bottom:10px}
+  .step h4{font-family:"Space Grotesk";font-size:1.02rem;margin-bottom:6px}
+  .step p{font-size:.87rem;color:var(--body)}
+
+  /* ---- honesty block ---- */
+  .honesty{margin-top:26px;background:var(--card);border:1px solid var(--line);
+           border-left:3px solid var(--v-purple);border-radius:10px;padding:22px 24px}
+  .honesty .hh{font-family:"IBM Plex Mono";font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
+               color:var(--v-purple);font-weight:600;margin-bottom:8px}
+  .honesty p{color:var(--body);max-width:76ch;font-size:.95rem}
+
+  /* ---- contact details ---- */
+  .cdetails{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;margin-top:6px;
+            font-family:"IBM Plex Mono";font-size:.82rem}
+  .cdetails a{color:var(--v-teal);text-decoration:none}
+  .caddr{font-family:"IBM Plex Mono";font-size:.76rem;color:var(--faint);margin-top:18px;line-height:1.8}
+  .worknote{margin-top:26px;font-family:"IBM Plex Mono";font-size:.82rem;color:var(--faint);
+            border-left:2px solid var(--v-teal);padding-left:16px;max-width:60ch}
+  #svcpick{display:none;font-family:"IBM Plex Mono";font-size:.74rem;color:var(--v-blue);margin-top:14px}
 
   /* ---- cursor readout ---- */
   #cur{position:fixed;right:14px;bottom:12px;z-index:40;font-family:"IBM Plex Mono";
@@ -215,6 +335,7 @@
     <a class="brand" href="#top">Meet Vaghani</a>
     <span class="links">
       <a href="#work">work</a>
+      <a href="#services">services</a>
       <a href="#capabilities">capabilities</a>
       <a href="#about">about</a>
       <a href="#contact" class="cta">get in touch</a>
@@ -228,9 +349,10 @@
   <div class="wrap">
     <div class="hero">
       <div>
-        <div class="kicker">ESG software &amp; data · India</div>
-        <h1>I build ESG &amp; compliance tools that <span class="u">actually ship</span>.</h1>
-        <p class="lead">Most sustainability teams can measure emissions but can't build the software to manage them. I do both — turning fragmented ESG data into working, audit-ready tools. Four of them are live right now.</p>
+        <div class="kicker">CBAM · carbon data · ESG software · India</div>
+        <h1>I make your carbon numbers <span class="u">defensible</span>, then I build the tools that keep them that way.</h1>
+        <p class="practice">EcoSetu · carbon, CBAM &amp; ESG practice of Keprin Overseas Corporation</p>
+        <p class="lead">Most exporters can measure emissions but cannot prove them, and cannot build the software to manage them. EcoSetu does both, the regulatory work and the tools. Three of them are live right now.</p>
         <div class="hero-cta">
           <a href="#work" class="btn btn-primary mag">See live work</a>
           <a href="#contact" class="btn btn-ghost mag">Start a project</a>
@@ -245,21 +367,247 @@
         <div class="termcap"><b>stdout is real</b> — every value printed above traces to a live, verifiable app.</div>
       </div>
     </div>
-
-    <div class="strip" id="stats">
-      <div class="cell rv"><div class="n"><span data-count="4">0</span> <small>live</small></div><div class="l">apps deployed &amp; clickable</div></div>
-      <div class="cell rv d1"><div class="n"><span data-count="256">0</span>/256</div><div class="l">EU CBAM values · 0 error</div></div>
-      <div class="cell rv d2"><div class="n"><span data-count="5">0</span>+<span data-count="9">0</span></div><div class="l">CBAM sectors + NGRBC principles</div></div>
-      <div class="cell rv d3"><div class="n">IIM-B</div><div class="l">Certified ESG Professional</div></div>
-    </div>
   </div>
 </header>
 
+<!-- SERVICES -->
+<section id="services"><div class="wrap">
+  <div class="axis rv"><b>// 01</b> services</div>
+  <h2 class="rv">What we do</h2>
+  <p class="sec-intro rv d1">Two things most firms split in half: the regulatory work, where the numbers have to survive an auditor, and the software, where the data has to survive daily use.</p>
+
+  <div class="helps rv d1">
+    <div class="help"><div class="hk">EU &amp; UK exporters</div><p>Shipping into the EU or UK and hearing the word CBAM from your buyer.</p></div>
+    <div class="help"><div class="hk">Manufacturers</div><p>Being asked for carbon numbers by customers, lenders or a parent group.</p></div>
+    <div class="help"><div class="hk">ESG platforms &amp; teams</div><p>Needing a calculator, a dashboard or a data pipeline built properly.</p></div>
+  </div>
+
+  <!-- LINE 01 -->
+  <div class="svc-line rv">
+    <div class="lhead">01 · CBAM compliance &amp; emissions data</div>
+    <p class="lintro">The EU mechanism has been live since January 2026. The UK starts its own in January 2027. Separate rules, separate deadlines, and if you sell into both you have to satisfy both.</p>
+    <div class="smenu">
+
+      <details class="srow" open>
+        <summary>
+          <div class="sidx">01</div>
+          <div class="smain">
+            <div class="sname">CBAM Exposure Snapshot</div>
+            <div class="sone">A free 30-minute call to find out whether CBAM touches you, and roughly what it could cost, before your buyer asks.</div>
+          </div>
+          <div class="smeta2"><span class="chip free">Free · 30 min</span><span class="exp">+</span></div>
+        </summary>
+        <div class="sbody">
+          <div class="bk">You get</div>
+          <p class="sfor">A one-page exposure sheet: your CN codes, the official default emission factors, the mark-up applied, an indicative cost now and at full phase-in, and the three data points your European buyer will ask for first.</p>
+          <div class="bk" style="margin-top:12px">Right for</div>
+          <p class="sfor">Any exporter who has not yet worked out whether CBAM applies to them.</p>
+          <div class="sfoot"><a class="scta" href="#contact" data-svc="CBAM Exposure Snapshot">Book a snapshot</a></div>
+        </div>
+      </details>
+
+      <details class="srow">
+        <summary>
+          <div class="sidx">02</div>
+          <div class="smain">
+            <div class="sname">CBAM Readiness Assessment</div>
+            <div class="sone">A full read on where you stand, what is missing, and exactly what to fix first, written so your buyer can read it too.</div>
+          </div>
+          <div class="smeta2"><span class="chip">1 to 2 weeks</span><span class="exp">+</span></div>
+        </summary>
+        <div class="sbody">
+          <div class="bk">You get</div>
+          <ul>
+            <li>CN-code scope confirmed</li>
+            <li>installation and production-route mapping</li>
+            <li>a gap analysis of your data against what a declaration needs</li>
+            <li>your real cost compared with the default-value cost</li>
+            <li>a prioritised fix list</li>
+            <li>a one-page summary written for your EU or UK customer</li>
+          </ul>
+          <div class="bk" style="margin-top:12px">Right for</div>
+          <p class="sfor">Exporters whose buyer has raised CBAM, or who expect them to.</p>
+          <div class="sfoot"><a class="scta" href="#contact" data-svc="CBAM Readiness Assessment">Request a scope</a></div>
+        </div>
+      </details>
+
+      <details class="srow">
+        <summary>
+          <div class="sidx">03</div>
+          <div class="smain">
+            <div class="sname">CBAM Emissions Data Package</div>
+            <div class="sone">We calculate your real product emissions from your own plant data, usually a lower and more defensible number than the EU default.</div>
+          </div>
+          <div class="smeta2"><span class="chip">4 to 8 weeks</span><span class="exp">+</span></div>
+        </summary>
+        <div class="sbody">
+          <div class="bk">You get</div>
+          <ul>
+            <li>installation boundary defined</li>
+            <li>monitoring methodology documented</li>
+            <li>direct and indirect emissions by production route</li>
+            <li>precursor treatment</li>
+            <li>per-CN emissions in the official communication template</li>
+            <li>an auditable data file for your importer's verifier</li>
+          </ul>
+          <div class="bk" style="margin-top:12px">Right for</div>
+          <p class="sfor">Producers whose default-value exposure is well above their real emissions.</p>
+          <div class="sfoot"><a class="scta" href="#contact" data-svc="CBAM Emissions Data Package">Request a scope</a></div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+
+  <!-- LINE 02 -->
+  <div class="svc-line rv">
+    <div class="lhead">02 · GHG accounting &amp; sustainability reporting</div>
+    <p class="lintro">Carbon accounting beyond CBAM. Often the first job when customers, lenders or a parent group start asking for emissions figures.</p>
+    <div class="smenu">
+
+      <details class="srow">
+        <summary>
+          <div class="sidx">01</div>
+          <div class="smain">
+            <div class="sname">GHG Inventory, Scope 1 &amp; 2</div>
+            <div class="sone">Your company carbon footprint, done properly, ready to hand to a customer or a lender.</div>
+          </div>
+          <div class="smeta2"><span class="chip">2 to 4 weeks</span><span class="exp">+</span></div>
+        </summary>
+        <div class="sbody">
+          <div class="bk">You get</div>
+          <p class="sfor">An emissions inventory by source and facility, an activity-data register, emission-factor documentation, a base-year statement, and intensity metrics you can put in front of a customer.</p>
+          <div class="bk" style="margin-top:12px">Right for</div>
+          <p class="sfor">Manufacturers being asked for carbon figures by customers, lenders or buyers.</p>
+          <div class="sfoot"><a class="scta" href="#contact" data-svc="GHG Inventory Scope 1 and 2">Request a scope</a></div>
+        </div>
+      </details>
+
+      <details class="srow">
+        <summary>
+          <div class="sidx">02</div>
+          <div class="smain">
+            <div class="sname">Scope 3 Screening &amp; Supplier Data</div>
+            <div class="sone">A first map of your supply-chain emissions, plus a workable way to get the data out of your suppliers.</div>
+          </div>
+          <div class="smeta2"><span class="chip">3 to 6 weeks</span><span class="exp">+</span></div>
+        </summary>
+        <div class="sbody">
+          <div class="bk">You get</div>
+          <p class="sfor">Materiality screening across the fifteen Scope 3 categories, estimates for the categories that matter, a supplier questionnaire and collection workflow, and a data-quality read on where primary data is worth chasing.</p>
+          <div class="bk" style="margin-top:12px">Right for</div>
+          <p class="sfor">Companies supplying multinationals that run supplier-emissions programmes.</p>
+          <div class="sfoot"><a class="scta" href="#contact" data-svc="Scope 3 Screening and Supplier Data">Request a scope</a></div>
+        </div>
+      </details>
+
+      <details class="srow">
+        <summary>
+          <div class="sidx">03</div>
+          <div class="smain">
+            <div class="sname">BRSR &amp; Sustainability Reporting</div>
+            <div class="sone">Your BRSR or sustainability report prepared end to end, with the workings behind every number.</div>
+          </div>
+          <div class="smeta2"><span class="chip">4 to 8 weeks</span><span class="exp">+</span></div>
+        </summary>
+        <div class="sbody">
+          <div class="bk">You get</div>
+          <p class="sfor">A completed disclosure set with the calculation workings, an assurance-readiness note flagging weak evidence, and a reusable data-collection template for next year.</p>
+          <div class="bk" style="margin-top:12px">Right for</div>
+          <p class="sfor">Listed entities, and unlisted suppliers whose customers ask for BRSR-style disclosure.</p>
+          <div class="sfoot"><a class="scta" href="#contact" data-svc="BRSR and Sustainability Reporting">Request a scope</a><div class="plinks"><a href="https://brsr-tool-msme.streamlit.app" target="_blank" rel="noopener">see the live BRSR tool</a></div></div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+
+  <!-- LINE 03 -->
+  <div class="svc-line rv">
+    <div class="lhead">03 · ESG software &amp; data engineering</div>
+    <p class="lintro">We build the tools, not only the reports. The CBAM calculator and BRSR platform in the work below are ours, end to end.</p>
+    <div class="smenu">
+
+      <details class="srow">
+        <summary>
+          <div class="sidx">01</div>
+          <div class="smain">
+            <div class="sname">ESG Dashboard Build</div>
+            <div class="sone">One live dashboard that pulls your ESG data out of scattered spreadsheets into something your team can actually use.</div>
+          </div>
+          <div class="smeta2"><span class="chip">3 to 6 weeks</span><span class="exp">+</span></div>
+        </summary>
+        <div class="sbody">
+          <div class="bk">You get</div>
+          <p class="sfor">A data model, ingestion from your existing spreadsheets or ERP, a calculation layer, the dashboard itself, documentation and handover.</p>
+          <div class="bk" style="margin-top:12px">Right for</div>
+          <p class="sfor">Companies whose ESG data currently lives in scattered spreadsheets.</p>
+          <div class="sfoot"><a class="scta" href="#contact" data-svc="ESG Dashboard Build">Start a project</a></div>
+        </div>
+      </details>
+
+      <details class="srow">
+        <summary>
+          <div class="sidx">02</div>
+          <div class="smain">
+            <div class="sname">Calculation Engine or Bespoke Tool</div>
+            <div class="sone">A custom calculator or compliance engine, built to your rules. The CBAM app below is one we built this way.</div>
+          </div>
+          <div class="smeta2"><span class="chip">4 to 8 weeks</span><span class="exp">+</span></div>
+        </summary>
+        <div class="sbody">
+          <div class="bk">You get</div>
+          <p class="sfor">A working application, documented methodology and factor sources, a validation test set, deployment and the source code.</p>
+          <div class="bk" style="margin-top:12px">Right for</div>
+          <p class="sfor">ESG platforms and consultancies needing a module faster than they can hire for it.</p>
+          <div class="sfoot"><a class="scta" href="#contact" data-svc="Calculation Engine or Bespoke Tool">Start a project</a><div class="plinks"><a href="https://ecosetucbam.streamlit.app" target="_blank" rel="noopener">see the live CBAM calculator</a></div></div>
+        </div>
+      </details>
+
+      <details class="srow">
+        <summary>
+          <div class="sidx">03</div>
+          <div class="smain">
+            <div class="sname">Data Pipeline &amp; Integration</div>
+            <div class="sone">Automated collection and cleanup of the sustainability data you re-key by hand every quarter.</div>
+          </div>
+          <div class="smeta2"><span class="chip">2 to 5 weeks</span><span class="exp">+</span></div>
+        </summary>
+        <div class="sbody">
+          <div class="bk">You get</div>
+          <p class="sfor">A pipeline from plant systems, utility bills, ERP exports and supplier submissions, with validation rules, exception handling, scheduled refresh and monitoring.</p>
+          <div class="bk" style="margin-top:12px">Right for</div>
+          <p class="sfor">Anyone re-keying the same sustainability data every quarter.</p>
+          <div class="sfoot"><a class="scta" href="#contact" data-svc="Data Pipeline and Integration">Start a project</a></div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+
+  <!-- HOW WE WORK -->
+  <h2 class="rv" style="margin-top:52px">How we work</h2>
+  <div class="flow">
+    <div class="step rv"><div class="num">01</div><h4>Exposure Snapshot</h4><p>A free 30-minute session. If CBAM does not apply to you, we say so and the conversation ends there.</p></div>
+    <div class="step rv d1"><div class="num">02</div><h4>Written scope</h4><p>Every engagement begins with a written scope, a fixed price and a delivery date. We do not bill hourly.</p></div>
+    <div class="step rv d2"><div class="num">03</div><h4>Data collection</h4><p>We supply the templates and work from your existing records. We do not ask you to build a data system before we can start.</p></div>
+    <div class="step rv d1"><div class="num">04</div><h4>Delivery and walkthrough</h4><p>Deliverables are handed over with a working session, so your team can defend the numbers without us.</p></div>
+    <div class="step rv d2"><div class="num">05</div><h4>Standing behind it</h4><p>We support the deliverable through your customer's or verifier's questions for 90 days at no extra charge.</p></div>
+  </div>
+
+  <!-- WHAT WE WILL NOT DO -->
+  <div class="honesty rv">
+    <div class="hh">What we will not do</div>
+    <p>We will not tell you that you face a fine from the European Union, because the CBAM obligation sits with the importer, not with you. We will not verify our own numbers, because the rules require that the party preparing the data and the party checking it are different. And we will not quote a saving before we have seen your data.</p>
+  </div>
+
+</div></section>
+
 <!-- WORK -->
 <section id="work"><div class="wrap">
-  <div class="axis rv"><b>// 01</b> selected work</div>
-  <h2 class="rv">Live, not mockups</h2>
-  <p class="sec-intro rv d1">Every project below is deployed and clickable. Each solves a real regulatory problem — and each was built solo, from methodology to interface.</p>
+  <div class="axis rv"><b>// 02</b> selected work</div>
+  <h2 class="rv">A sample you can click</h2>
+  <p class="sec-intro rv d1">These are live and open, so you can judge the work yourself instead of taking our word for it. They are examples of what we build, not the whole of it. Most engagements are client-owned and stay private.</p>
 
   <!-- CBAM -->
   <article class="project rv tilt">
@@ -314,28 +662,10 @@
     <div class="plinks"><a href="https://brsr-tool-msme.streamlit.app" target="_blank" rel="noopener">brsr-tool-msme.streamlit.app</a></div>
   </article>
 
-  <!-- Arham -->
-  <article class="project rv tilt">
-    <div class="ptop">
-      <div><div class="pid">PROJ-03</div><h3>Arham Snacks — Brand &amp; Ops Site</h3></div>
-      <span class="pill"><i></i>LIVE</span>
-    </div>
-    <div class="tagline">Small-business tooling, shipped fast.</div>
-    <p>A web presence and lightweight operations front-end for a local snacks brand — proof the same rapid-build approach works beyond ESG, for any founder who needs a clean interface around messy operational data.</p>
-    <ul>
-      <li>Built and deployed quickly on the same Python/Streamlit stack</li>
-      <li>Shows range: consumer-facing brand work, not just compliance dashboards</li>
-    </ul>
-    <div class="stack">
-      <span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">rapid MVP</span>
-    </div>
-    <div class="plinks"><a href="https://arhamsnacks.streamlit.app" target="_blank" rel="noopener">arhamsnacks.streamlit.app</a></div>
-  </article>
-
   <!-- Mind Arena -->
   <article class="project rv tilt">
     <div class="ptop">
-      <div><div class="pid">PROJ-04 · 2026</div><h3>Mind Arena — Daily Brain &amp; Speech Trainer</h3></div>
+      <div><div class="pid">PROJ-03 · 2026</div><h3>Mind Arena — Daily Brain &amp; Speech Trainer</h3></div>
       <span class="pill"><i></i>LIVE</span>
     </div>
     <div class="tagline">Six focused minutes a day to sharpen your ESG mind and your voice.</div>
@@ -360,11 +690,13 @@
     </div>
     <div class="plinks"><a href="https://mindarena.streamlit.app" target="_blank" rel="noopener">mindarena.streamlit.app</a></div>
   </article>
+
+  <p class="worknote rv">These are the ones we can point to publicly. The rest lives inside our clients' businesses, where it belongs.</p>
 </div></section>
 
 <!-- CAPABILITIES -->
 <section id="capabilities"><div class="wrap">
-  <div class="axis rv"><b>// 02</b> capabilities</div>
+  <div class="axis rv"><b>// 03</b> capabilities</div>
   <h2 class="rv">From raw data to working software</h2>
   <p class="sec-intro rv d1">One person across the whole chain, so nothing gets lost in handoffs between a consultant who knows ESG and a developer who doesn't.</p>
   <div class="svc-grid">
@@ -377,7 +709,7 @@
 
 <!-- ABOUT -->
 <section id="about"><div class="wrap">
-  <div class="axis rv"><b>// 03</b> about</div>
+  <div class="axis rv"><b>// 04</b> about</div>
   <h2 class="rv">Rare combination, deliberately built</h2>
   <div class="about-grid">
     <div class="about rv d1">
@@ -398,14 +730,54 @@
 <!-- CONTACT -->
 <div id="contact" class="contact"><div class="wrap">
   <div class="status rv"><i></i>status: open_for_projects</div>
-  <h2 class="rv">Have ESG data that should be software?</h2>
-  <p class="rv d1">Whether it's a dashboard, a compliance calculator, or a full MVP — if it lives in sustainability or climate, I can build it. First reply usually within a day.</p>
-  <a href="mailto:meet.vaghani9909@gmail.com" class="btn btn-primary mag rv d2">meet.vaghani9909@gmail.com</a>
+  <h2 class="rv">Carbon problem, or a data problem?</h2>
+  <p class="rv d1">CBAM and emissions data, GHG accounting and BRSR, or ESG software: tell us the one you have and we will scope it. First reply usually within a day.</p>
+  <a id="mailbtn" href="mailto:meet.vaghani9909@gmail.com?subject=EcoSetu%20enquiry" class="btn btn-primary mag rv d2">meet.vaghani9909@gmail.com</a>
+  <div id="svcpick"></div>
+  <div class="cdetails rv d2">
+    <a href="https://wa.me/919409417490" target="_blank" rel="noopener">WhatsApp +91 94094 17490</a>
+    <a href="tel:+919409417490">call +91 94094 17490</a>
+  </div>
+  <div class="caddr rv">Keprin Overseas Corporation · 251, 323 Madhav Darshan Complex, Waghavadi Road, Bhavnagar 364001, Gujarat, India</div>
 </div></div>
 
 <footer><div class="wrap">
-  <div>built by Meet Vaghani · <a href="https://www.linkedin.com/in/meetvaghani" target="_blank" rel="noopener">linkedin</a> · <a href="https://ecosetucbam.streamlit.app" target="_blank" rel="noopener">cbam</a> · <a href="https://brsr-tool-msme.streamlit.app" target="_blank" rel="noopener">brsr</a> · <a href="https://arhamsnacks.streamlit.app" target="_blank" rel="noopener">arham</a> · <a href="https://mindarena.streamlit.app" target="_blank" rel="noopener">mind arena</a></div>
-  <div class="prov">data provenance: every number on this page links to a live, verifiable artifact.</div>
+  <div class="foot-rule"></div>
+  <div class="foot-mark">EcoSetu</div>
+  <p class="foot-tag">The carbon, CBAM and ESG practice of Keprin Overseas Corporation. Regulatory numbers that survive an auditor, software that survives daily use.</p>
+
+  <div class="foot-grid">
+    <div class="fcol">
+      <h5>The practice</h5>
+      <p class="fclock" id="footclock">Bhavnagar &middot; <b>--:-- IST</b></p>
+      <p><span class="fdot">&#9679;</span> open for projects</p>
+      <p>first reply usually within a day</p>
+    </div>
+    <div class="fcol">
+      <h5>Explore</h5>
+      <a href="#services">Services</a>
+      <a href="#work">Selected work</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#about">About</a>
+    </div>
+    <div class="fcol">
+      <h5>Live tools</h5>
+      <a href="https://ecosetucbam.streamlit.app" target="_blank" rel="noopener">CBAM calculator</a>
+      <a href="https://brsr-tool-msme.streamlit.app" target="_blank" rel="noopener">BRSR tool</a>
+      <a href="https://mindarena.streamlit.app" target="_blank" rel="noopener">Mind Arena</a>
+    </div>
+    <div class="fcol">
+      <h5>Reach us</h5>
+      <a href="https://www.linkedin.com/in/meetvaghani" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://wa.me/919409417490" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:meet.vaghani9909@gmail.com">Email</a>
+    </div>
+  </div>
+
+  <div class="foot-base">
+    <div>&copy; 2026 EcoSetu &middot; Keprin Overseas Corporation &middot; built by Meet Vaghani</div>
+    <a href="#top" class="totop">back to top &uarr;</a>
+  </div>
 </div></footer>
 
 <div id="cur" aria-hidden="true">x:0000 · y:0000</div>
@@ -452,13 +824,38 @@
     else io.observe(el);
   });
 
+  /* ---------- service CTA prefills the contact mail subject ---------- */
+  var mailbtn = document.getElementById('mailbtn');
+  var svcpick = document.getElementById('svcpick');
+  document.querySelectorAll('.scta').forEach(function(a){
+    a.addEventListener('click', function(){
+      var svc = a.getAttribute('data-svc');
+      if (!svc) return;
+      if (mailbtn) mailbtn.href = 'mailto:meet.vaghani9909@gmail.com?subject=' + encodeURIComponent(svc);
+      if (svcpick){ svcpick.textContent = 'enquiry set to: ' + svc; svcpick.style.display = 'block'; }
+    });
+  });
+
+  /* ---------- footer live clock (Bhavnagar / IST) ---------- */
+  var footclock = document.getElementById('footclock');
+  if (footclock){
+    var tickClock = function(){
+      try{
+        var t = new Date().toLocaleTimeString('en-GB', {timeZone:'Asia/Kolkata', hour:'2-digit', minute:'2-digit'});
+        footclock.innerHTML = 'Bhavnagar &middot; <b>' + t + ' IST</b>';
+      }catch(e){}
+    };
+    tickClock();
+    setInterval(tickClock, 20000);
+  }
+
   /* ---------- terminal typing ---------- */
   var tout = document.getElementById('tout');
   var LINES = [
     {html:'<span class="p">$</span> python', pause:420},
     {html:'<span class="p">&gt;&gt;&gt;</span> <span>from</span> meet_vaghani <span>import</span> portfolio', pause:260},
     {html:'<span class="p">&gt;&gt;&gt;</span> portfolio.live_apps', pause:200},
-    {html:'<span class="o">[</span><span class="s">\'ecosetu_cbam\'</span><span class="o">, </span><span class="s">\'ecosetu_brsr\'</span><span class="o">, </span><span class="s">\'arham_snacks\'</span><span class="o">, </span><span class="s">\'mind_arena\'</span><span class="o">]</span>', out:true, pause:340},
+    {html:'<span class="o">[</span><span class="s">\'ecosetu_cbam\'</span><span class="o">, </span><span class="s">\'ecosetu_brsr\'</span><span class="o">, </span><span class="s">\'mind_arena\'</span><span class="o">]</span>', out:true, pause:340},
     {html:'<span class="p">&gt;&gt;&gt;</span> portfolio.reconcile(<span class="s">\'EU/2025/2621\'</span>)', pause:240},
     {html:'<span class="n">256</span><span class="o">/</span><span class="n">256</span><span class="o"> matched · 0 missing · 0 extra</span>', out:true, pause:340},
     {html:'<span class="p">&gt;&gt;&gt;</span> portfolio.status', pause:200},
