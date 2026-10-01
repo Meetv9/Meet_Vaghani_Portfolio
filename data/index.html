@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meet Vaghani | ESG &amp; Climate Data</title>
+<meta name="description" content="Meet Vaghani builds the data systems behind carbon and sustainability reporting: Python, SQL and Excel pipelines for EU CBAM and ESG data. IIM Bangalore Certified ESG Professional and Gold Medalist.">
+<link rel="canonical" href="https://meetv9.github.io/Meet_Vaghani_Portfolio/data/">
+<meta name="author" content="Meet Vaghani">
+<meta name="theme-color" content="#101614">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="apple-touch-icon" href="../icon-512.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Meet Vaghani">
+<meta property="og:title" content="Meet Vaghani | ESG &amp; Climate Data">
+<meta property="og:description" content="I build the data systems behind carbon and sustainability reporting. Python, SQL and Excel pipelines for EU CBAM and ESG data, 1,100+ automated tests, two free live tools.">
+<meta property="og:url" content="https://meetv9.github.io/Meet_Vaghani_Portfolio/data/">
+<meta property="og:image" content="https://meetv9.github.io/Meet_Vaghani_Portfolio/data/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Meet Vaghani, ESG and climate data">
+<meta property="og:locale" content="en_GB">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Meet Vaghani | ESG &amp; Climate Data">
+<meta name="twitter:description" content="I build the data systems behind carbon and sustainability reporting: Python, SQL and Excel pipelines for EU CBAM and ESG data.">
+<meta name="twitter:image" content="https://meetv9.github.io/Meet_Vaghani_Portfolio/data/og.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Meet Vaghani",
+  "url": "https://meetv9.github.io/Meet_Vaghani_Portfolio/data/",
+  "address": { "@type": "PostalAddress", "addressLocality": "Bhavnagar", "addressRegion": "Gujarat", "addressCountry": "IN" },
+  "sameAs": ["https://www.linkedin.com/in/meetvaghani", "https://meetv9.github.io/Meet_Vaghani_Portfolio/"],
+  "knowsAbout": ["ESG data", "Climate data", "EU CBAM", "GHG accounting", "BRSR reporting", "Python", "SQL", "Data engineering"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f9f8; --grid:#e7edeb; --ink:#101614; --body:#39433f; --faint:#68716d;
+    --card:#ffffff; --line:#dde4e1;
+    --v-purple:#440154; --v-blue:#3b528b; --v-teal:#21918c; --v-green:#5ec962; --v-yellow:#fde725;
+    --viridis:linear-gradient(90deg,#440154,#3b528b,#21918c,#5ec962,#fde725);
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size:34px 34px;
+  }
+  .wrap{max-width:1020px;margin:0 auto;padding:0 24px}
+  @media(max-width:480px){.wrap{padding:0 16px}}
+  a{color:var(--v-teal)}
+  :focus-visible{outline:2px solid var(--v-teal);outline-offset:3px}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+  /* ---- nav + scroll progress ---- */
+  nav{position:sticky;top:0;z-index:30;background:rgba(247,249,248,.9);backdrop-filter:blur(10px)}
+  nav .bar{height:60px;display:flex;justify-content:space-between;align-items:center}
+  nav .brand{font-family:"Space Grotesk";font-weight:700;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
+  nav .links a{color:var(--faint);text-decoration:none;margin-left:22px;font-size:.88rem;font-family:"IBM Plex Mono"}
+  nav .links a:hover{color:var(--ink)}
+  nav .links a.cta{background:var(--ink);color:#fff;padding:.5rem .85rem;border-radius:6px}
+  .track{height:3px;background:var(--line)}
+  #prog{height:3px;background:var(--viridis);transform:scaleX(0);transform-origin:left;margin-top:-3px;will-change:transform}
+  @media(max-width:720px){nav .links a:not(.cta){display:none}}
+
+  /* ---- hero ---- */
+  header{position:relative;padding:72px 0 48px}
+  .hero{display:grid;grid-template-columns:1.08fr .92fr;gap:52px;align-items:center}
+  @media(max-width:860px){.hero{grid-template-columns:1fr;gap:36px}}
+  .kicker{font-family:"IBM Plex Mono";font-size:.72rem;letter-spacing:.14em;color:var(--v-teal);
+          text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+  .kicker::before{content:"";width:26px;height:2px;background:var(--viridis)}
+  h1{font-family:"Space Grotesk";font-size:2.85rem;line-height:1.07;letter-spacing:-.03em;font-weight:700;max-width:17ch}
+  h1 .u{background:linear-gradient(transparent 68%, rgba(94,201,98,.45) 68%)}
+  header p.lead{font-size:1.1rem;color:var(--body);margin-top:20px;max-width:52ch}
+  .medal{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-family:"IBM Plex Mono";font-size:.76rem;
+         color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:.38rem .8rem}
+  .medal i{width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff3a6,#e0b83a 60%,#b58a17)}
+  .hero-cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{padding:.7rem 1.15rem;border-radius:7px;text-decoration:none;font-weight:600;font-size:.93rem;
+       display:inline-block;transition:transform .18s var(--ease), background .18s, border-color .18s}
+  .btn:hover{transform:translateY(-1px)}
+  .btn-primary{background:var(--v-teal);color:#fff}
+  .btn-primary:hover{background:#1a7a72}
+  .btn-ghost{border:1.5px solid var(--line);color:var(--ink);background:rgba(255,255,255,.6)}
+  .btn-ghost:hover{border-color:var(--ink)}
+  .status{display:flex;align-items:center;gap:8px;font-family:"IBM Plex Mono";font-size:.74rem;color:var(--faint);margin-top:18px}
+  .status i{width:8px;height:8px;border-radius:50%;background:var(--v-green);animation:pulse 2s infinite;flex:none}
+  @keyframes pulse{50%{opacity:.35}}
+  @media(max-width:680px){h1{font-size:2.15rem}}
+
+  /* ---- terminal (real output) ---- */
+  .term{background:#12161a;border-radius:10px;box-shadow:0 18px 50px rgba(16,22,20,.18);
+        overflow:hidden;justify-self:end;width:100%;max-width:440px}
+  @media(max-width:860px){.term{justify-self:start}}
+  .term .tbar{display:flex;align-items:center;gap:7px;padding:11px 14px;background:#1a2026}
+  .term .dot{width:11px;height:11px;border-radius:50%}
+  .term .d1{background:#ff5f56}.term .d2{background:#ffbd2e}.term .d3{background:#27c93f}
+  .term .ttl{margin-left:8px;font-family:"IBM Plex Mono";font-size:.68rem;color:#7d8a85;letter-spacing:.04em}
+  .term pre{padding:16px 18px 18px;font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:.76rem;line-height:1.72;
+            color:#d7e0db;white-space:pre-wrap;word-break:break-word;min-height:268px}
+  .term .p{color:#35c4b5}.term .c{color:#6f7d77}.term .s{color:#8fd9a8}.term .n{color:#fde725}.term .o{color:#9aa8a2}
+  .caret{display:inline-block;width:8px;height:14px;background:#35c4b5;vertical-align:-2px;animation:blink 1s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+  .termcap{font-family:"IBM Plex Mono";font-size:.68rem;color:var(--faint);margin-top:10px;line-height:1.6;
+           justify-self:end;width:100%;max-width:440px}
+  @media(max-width:860px){.termcap{justify-self:start}}
+  .termcol{display:grid}
+  /* grid and flex children may shrink below their content width: nothing forces the page wider than the screen */
+  .hero>*,.termcol>*,.xgrid>*,.project .split>*,.kit>*,.ptop>*,.ticks span{min-width:0}
+
+  /* ---- stat strip ---- */
+  .strip{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);
+         background:var(--card);border-radius:10px;overflow:hidden;margin:34px 0 0}
+  @media(max-width:680px){.strip{grid-template-columns:repeat(2,1fr)}}
+  .strip .cell{padding:18px 20px;border-right:1px solid var(--line);position:relative}
+  .strip .cell::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--viridis);
+                       transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+  .strip .cell:hover::before{transform:scaleX(1)}
+  .strip .cell:last-child{border-right:none}
+  @media(max-width:680px){.strip .cell:nth-child(2n){border-right:none}
+    .strip .cell:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+  .strip .n{font-family:"IBM Plex Mono";font-weight:600;font-size:1.55rem;letter-spacing:-.02em}
+  .strip .l{font-size:.74rem;color:var(--faint);margin-top:3px;font-family:"IBM Plex Mono";line-height:1.45}
+
+  /* ---- sections ---- */
+  section{padding:62px 0 8px}
+  .axis{display:flex;align-items:center;gap:12px;font-family:"IBM Plex Mono";
+        font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:10px}
+  .axis::after{content:"";flex:1;height:1px;background:var(--line)}
+  .axis b{color:var(--v-teal);font-weight:600}
+  h2{font-family:"Space Grotesk";font-size:1.85rem;letter-spacing:-.02em;font-weight:700;margin-bottom:8px}
+  .sec-intro{color:var(--body);max-width:62ch}
+
+  /* ---- reveals ---- */
+  .rv{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease), transform .7s var(--ease)}
+  .rv.in{opacity:1;transform:none}
+
+  /* ---- project cards ---- */
+  .project{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px;
+           margin-top:24px;position:relative;overflow:hidden;transition:box-shadow .25s var(--ease), border-color .25s}
+  @media(max-width:480px){.project{padding:22px 18px}}
+  .project::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--viridis);
+                   transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+  .project:hover{box-shadow:0 16px 42px rgba(16,22,20,.10);border-color:#cdd6d2}
+  .project:hover::before{transform:scaleX(1)}
+  .ptop{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+  .project h3{font-family:"Space Grotesk";font-size:1.3rem;letter-spacing:-.01em;line-height:1.25}
+  .pid{font-family:"IBM Plex Mono";font-size:.7rem;color:var(--faint)}
+  .pill{font-family:"IBM Plex Mono";font-size:.68rem;font-weight:600;letter-spacing:.05em;
+        padding:.3rem .65rem;border-radius:999px;white-space:nowrap;background:rgba(94,201,98,.14);color:#25753a}
+  .pill i{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--v-green);
+          margin-right:5px;animation:pulse 2s ease-in-out infinite}
+  .pill.conf{background:rgba(59,82,139,.12);color:var(--v-blue)}
+  .pill.conf i{background:var(--v-blue);animation:none}
+  .tagline{color:var(--v-blue);font-weight:600;font-size:.95rem;margin:4px 0 4px}
+  .note{font-family:"IBM Plex Mono";font-size:.68rem;color:var(--faint);margin:0 0 12px;letter-spacing:.02em}
+  .project p{color:var(--body);font-size:.97rem;max-width:75ch}
+  .project ul{list-style:none;margin:14px 0 0}
+  .project li{padding-left:20px;position:relative;font-size:.93rem;color:var(--body);margin:7px 0;max-width:80ch}
+  .project li::before{content:"\25B8";position:absolute;left:0;color:var(--v-teal);top:1px;font-size:.8rem}
+  .stack{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+  .tag{font-family:"IBM Plex Mono";font-size:.7rem;background:#eef2f0;color:#4a534f;padding:.3rem .6rem;border-radius:5px}
+  .plinks{margin-top:18px}
+  .plinks a{font-weight:600;font-size:.9rem;text-decoration:none;font-family:"IBM Plex Mono"}
+  .plinks a::after{content:" \2197";font-size:.8rem}
+  .project .split{display:grid;grid-template-columns:1.25fr 1fr;gap:28px;margin-top:6px}
+  @media(max-width:800px){.project .split{grid-template-columns:1fr;gap:6px}}
+
+  /* data glyphs */
+  .glyph{margin-top:16px;padding:14px 16px;background:#f2f6f4;border:1px dashed var(--line);border-radius:8px}
+  .glyph .gl{font-family:"IBM Plex Mono";font-size:.7rem;color:var(--faint);margin-bottom:8px;display:flex;justify-content:space-between;gap:4px 10px;flex-wrap:wrap}
+  .glyph .gl b{color:var(--ink);font-weight:600}
+  .gbar{height:10px;border-radius:5px;background:#e2e9e6;position:relative;overflow:hidden}
+  .gbar i{position:absolute;inset:0;background:var(--viridis);border-radius:5px;
+          transform:scaleX(0);transform-origin:left;transition:transform 1.2s var(--ease) .25s}
+  .in .gbar i{transform:scaleX(var(--to,1))}
+  .ticks{display:flex;gap:6px;margin-top:10px}
+  .ticks span{flex:1;text-align:center;font-family:"IBM Plex Mono";font-size:.66rem;color:var(--faint);
+              border-top:2px solid var(--v-teal);padding-top:4px}
+  .ticks span b{color:var(--ink);font-weight:600}
+  .blocks{display:flex;gap:5px;margin-top:10px}
+  .blocks i{flex:1;height:22px;border-radius:3px;background:var(--v-teal);display:grid;place-items:center;
+            font-style:normal;font-family:"IBM Plex Mono";font-size:.58rem;color:#fff;
+            transform:scaleY(0);transform-origin:bottom;transition:transform .45s var(--ease)}
+  .blocks i:nth-child(odd){background:var(--v-blue)}
+  .in .blocks i{transform:scaleY(1)}
+  .in .blocks i:nth-child(2){transition-delay:.06s}.in .blocks i:nth-child(3){transition-delay:.12s}
+  .in .blocks i:nth-child(4){transition-delay:.18s}.in .blocks i:nth-child(5){transition-delay:.24s}
+  .in .blocks i:nth-child(6){transition-delay:.30s}.in .blocks i:nth-child(7){transition-delay:.36s}
+  .in .blocks i:nth-child(8){transition-delay:.42s}.in .blocks i:nth-child(9){transition-delay:.48s}
+
+  /* walkthrough video */
+  .demo{margin:18px 0 8px}
+  .demo video{display:block;width:100%;aspect-ratio:16/9;border-radius:10px;background:#0b1110;
+              box-shadow:0 16px 38px rgba(16,22,20,.20);border:1px solid #1d2a27}
+  .demo figcaption{display:flex;justify-content:space-between;gap:8px 16px;flex-wrap:wrap;margin-top:9px;
+                   font-family:"IBM Plex Mono";font-size:.68rem;color:var(--faint)}
+  .demo figcaption span:first-child{color:var(--v-teal);font-weight:600}
+
+  /* pipeline diagram (confidential platform) */
+  .pipe{display:grid;grid-template-columns:repeat(5,1fr);gap:26px;margin:20px 0 4px;counter-reset:node}
+  .node{position:relative;background:#f2f6f4;border:1px solid var(--line);border-radius:9px;padding:12px 12px 13px}
+  .node:not(:last-child)::after{content:"\2192";position:absolute;right:-20px;top:50%;transform:translateY(-50%);
+        color:var(--v-teal);font-family:"IBM Plex Mono";font-size:.95rem;font-weight:600}
+  .node .nk{font-family:"IBM Plex Mono";font-size:.6rem;color:var(--v-teal);font-weight:600;letter-spacing:.08em}
+  .node h4{font-family:"Space Grotesk";font-size:.93rem;margin:2px 0 4px;color:var(--ink);line-height:1.25}
+  .node p{font-size:.76rem !important;color:var(--body);line-height:1.45}
+  .node.twin{border-color:rgba(33,145,140,.55);background:linear-gradient(180deg,rgba(33,145,140,.09),rgba(94,201,98,.04))}
+  .in .node{animation:lit 6s var(--ease) infinite}
+  .in .node:nth-child(2){animation-delay:.9s}.in .node:nth-child(3){animation-delay:1.8s}
+  .in .node:nth-child(4){animation-delay:2.7s}.in .node:nth-child(5){animation-delay:3.6s}
+  @keyframes lit{0%,24%,100%{box-shadow:0 0 0 0 rgba(33,145,140,0)}8%{box-shadow:0 0 0 3px rgba(33,145,140,.28)}}
+  @media(max-width:900px){.pipe{grid-template-columns:1fr;gap:24px}
+    .node:not(:last-child)::after{content:"\2193";right:auto;left:50%;top:auto;bottom:-23px;transform:translateX(-50%)}}
+
+  /* ---- method ---- */
+  .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px}
+  @media(max-width:900px){.flow{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.flow{grid-template-columns:1fr}}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;
+        transition:transform .25s var(--ease), box-shadow .25s var(--ease)}
+  .step:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(16,22,20,.08)}
+  .step .num{font-family:"IBM Plex Mono";font-size:.7rem;color:var(--v-teal);font-weight:600;margin-bottom:10px}
+  .step h4{font-family:"Space Grotesk";font-size:1.03rem;margin-bottom:6px}
+  .step p{font-size:.88rem;color:var(--body)}
+
+  /* ---- toolkit ---- */
+  .kit{display:grid;grid-template-columns:210px 1fr;gap:14px 24px;margin-top:22px;background:var(--card);
+       border:1px solid var(--line);border-radius:12px;padding:24px}
+  .kit .kk{font-family:"IBM Plex Mono";font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;
+           color:var(--v-teal);font-weight:600;padding-top:5px}
+  .kit .kv{display:flex;flex-wrap:wrap;gap:7px}
+  @media(max-width:640px){.kit{grid-template-columns:1fr;gap:8px;padding:20px 18px}.kit .kv{margin-bottom:12px}}
+
+  /* ---- experience ---- */
+  .xgrid{display:grid;grid-template-columns:1.5fr 1fr;gap:44px;margin-top:22px}
+  @media(max-width:820px){.xgrid{grid-template-columns:1fr;gap:30px}}
+  .tl{border-left:2px solid var(--line);padding-left:24px;margin-left:6px}
+  .tli{position:relative;padding-bottom:24px}
+  .tli:last-child{padding-bottom:0}
+  .tli::before{content:"";position:absolute;left:-32px;top:5px;width:12px;height:12px;border-radius:50%;
+               background:var(--bg);border:2px solid var(--v-teal)}
+  .tli:first-child::before{background:var(--v-teal)}
+  .tld{font-family:"IBM Plex Mono";font-size:.7rem;color:var(--faint)}
+  .tlr{font-family:"Space Grotesk";font-weight:700;font-size:1.06rem;margin-top:2px;line-height:1.3}
+  .tlo{font-size:.88rem;color:var(--v-blue);font-weight:600}
+  .tli p{font-size:.9rem;color:var(--body);margin-top:5px;max-width:64ch}
+  .facts{border-left:2px solid var(--v-teal);padding-left:20px}
+  .facts h4{font-family:"IBM Plex Mono";font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--v-teal);
+            font-weight:600;margin-bottom:12px}
+  .facts .row{margin-bottom:15px}
+  .facts .v{font-weight:600;font-size:.94rem}
+  .facts .k{font-family:"IBM Plex Mono";font-size:.7rem;color:var(--faint);margin-top:1px}
+  .gold{color:#9a7412}
+
+  /* ---- contact ---- */
+  .contact{text-align:center;padding:76px 0 64px}
+  .contact h2{font-size:2rem;margin-bottom:12px}
+  .contact p{color:var(--body);max-width:50ch;margin:0 auto 24px}
+  .contact .hero-cta{justify-content:center}
+  .contact .status{justify-content:center;margin:0 0 16px}
+  .cdetails{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 24px;margin-top:20px;
+            font-family:"IBM Plex Mono";font-size:.8rem;color:var(--faint)}
+  .cdetails a{color:var(--v-teal);text-decoration:none}
+
+  footer{padding:30px 0 40px;color:var(--faint);font-size:.74rem;font-family:"IBM Plex Mono"}
+  .foot-rule{height:2px;background:var(--viridis);border-radius:2px;margin-bottom:22px}
+  .foot-base{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+  .foot-base a{color:var(--faint);text-decoration:none}
+  .foot-base a:hover{color:var(--ink)}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none!important;transition:none!important}
+    .rv{opacity:1;transform:none}
+    .gbar i{transform:scaleX(var(--to,1))}
+    .blocks i{transform:scaleY(1)}
+  }
+
+  @media print{
+    @page{size:A4;margin:14mm}
+    body{background:#fff;font-size:10.5pt}
+    nav,.track,.caret,.status i,.pill i{display:none!important}
+    .rv{opacity:1!important;transform:none!important}
+    .gbar i{transform:scaleX(var(--to,1))!important}
+    .blocks i{transform:scaleY(1)!important}
+    .in .node{animation:none!important}
+    header{padding:0 0 18px}
+    section{padding:24px 0 0}
+    .project,.step,.kit,.tli,.facts .row{break-inside:avoid}
+    .project{box-shadow:none;margin-top:16px}
+    .contact{padding:30px 0 10px}
+    .term pre{min-height:0}
+    a{text-decoration:none}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap bar">
+    <a class="brand" href="#top">Meet Vaghani</a>
+    <div class="links">
+      <a href="#projects">projects</a>
+      <a href="#method">method</a>
+      <a href="#toolkit">toolkit</a>
+      <a href="#experience">experience</a>
+      <a class="cta" href="Meet_Vaghani_CV_Data_Analyst.pdf" target="_blank" rel="noopener">Download CV</a>
+    </div>
+  </div>
+  <div class="track"><div id="prog"></div></div>
+</nav>
+
+<header id="top">
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <div class="kicker">ESG &amp; Climate Data Analyst</div>
+        <h1>I build the <span class="u">data systems</span> behind carbon and sustainability reporting.</h1>
+        <p class="lead">Python, SQL and Excel pipelines that turn raw plant and company data into accurate, traceable figures for EU CBAM and ESG reporting.</p>
+        <div class="medal"><i aria-hidden="true"></i>Certified ESG Professional &middot; Gold Medalist, IIM Bangalore</div>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="Meet_Vaghani_CV_Data_Analyst.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+          <a class="btn btn-ghost" href="mailto:meet.vaghani9909@gmail.com">Email me</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/meetvaghani" target="_blank" rel="noopener">LinkedIn &#8599;</a>
+        </div>
+        <div class="status"><i aria-hidden="true"></i>Open to ESG and climate data roles in India &middot; open to relocation</div>
+      </div>
+      <div class="termcol">
+        <div class="term" role="img" aria-label="Terminal output. npm test on the CBAM monitoring platform: 1128 tests, 1128 pass, 0 fail. pytest on the CBAM calculator engine: 47 passed. SHA-256 of the official default-value dataset matches the stored checksum.">
+          <div class="tbar"><span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span><span class="ttl">checks.log</span></div>
+          <pre id="tout" aria-hidden="true"></pre>
+        </div>
+        <div class="termcap">Real output from my own projects, run on 1 October 2026.</div>
+      </div>
+    </div>
+
+    <div class="strip rv">
+      <div class="cell"><div class="n"><span data-count="1100">1,100</span>+</div><div class="l">automated tests on the CBAM platform</div></div>
+      <div class="cell"><div class="n"><span data-count="256">256</span>/256</div><div class="l">official EU values reconciled</div></div>
+      <div class="cell"><div class="n"><span data-count="55">55</span></div><div class="l">early-adopter sign-ups</div></div>
+      <div class="cell"><div class="n"><span data-count="2">2</span></div><div class="l">free tools, live and public</div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="projects"><div class="wrap">
+  <div class="axis rv"><b>// 01</b> projects</div>
+  <h2 class="rv">Data work you can inspect</h2>
+  <p class="sec-intro rv">Three systems, each mine end to end. Two are live and free to use. The third was built for a cement industry association, so its details stay confidential, but you can <a href="#demo">watch it run on modelled data</a>.</p>
+
+  <article class="project rv">
+    <div class="ptop">
+      <div><div class="pid">01</div><h3>CBAM monitoring &amp; reporting platform</h3></div>
+      <span class="pill conf"><i></i>CONFIDENTIAL</span>
+    </div>
+    <div class="tagline">For a cement industry association&rsquo;s CBAM compliance</div>
+    <div class="note">Details confidential &middot; built and tested on modelled plant data</div>
+    <p>Plants enter monthly fuel, energy and production data. The platform calculates emissions, flags data gaps and produces the annual emissions report, and every figure can be traced back to where it came from.</p>
+
+    <figure class="demo" id="demo">
+      <video controls preload="none" playsinline poster="cbam-platform-walkthrough-poster.jpg"
+             aria-label="72-second walkthrough of the CBAM monitoring and reporting platform, using modelled demo data">
+        <source src="cbam-platform-walkthrough.mp4" type="video/mp4">
+        Your browser cannot play this video. <a href="cbam-platform-walkthrough.mp4">Download the walkthrough (MP4)</a>.
+      </video>
+      <figcaption><span>&#9654; 72-second walkthrough, with music</span><span>Modelled data for a fictional plant</span></figcaption>
+    </figure>
+
+    <div class="pipe" role="list" aria-label="How data moves through the platform">
+      <div class="node" role="listitem"><div class="nk">STEP 1</div><h4>Plant data</h4><p>Monthly fuel, energy and production figures</p></div>
+      <div class="node" role="listitem"><div class="nk">STEP 2</div><h4>Validate</h4><p>Gap register, meter and calibration register</p></div>
+      <div class="node twin" role="listitem"><div class="nk">STEP 3</div><h4>Calculate twice</h4><p>Main engine and an independent second method that must agree</p></div>
+      <div class="node" role="listitem"><div class="nk">STEP 4</div><h4>Approve &amp; lock</h4><p>Approval workflow and a full audit trail</p></div>
+      <div class="node" role="listitem"><div class="nk">STEP 5</div><h4>Report</h4><p>Annual report PDF and a signed, encrypted export</p></div>
+    </div>
+
+    <ul>
+      <li>SQL database (SQLite) with versioned migrations and hand-written queries, joins and transactions.</li>
+      <li>A second, independent calculation cross-checks the annual figures and blocks any export where the two disagree.</li>
+      <li>Physical balance checks catch production figures that look plausible but are wrong.</li>
+      <li>Every result is locked to the version of the EU rules that produced it, so a 2026 figure can still be explained after the rules change.</li>
+      <li>Official default values are loaded from the European Commission&rsquo;s workbook by a Python ETL.</li>
+      <li>GitHub Actions CI on every change, tested backups, role-based access and two-factor login.</li>
+    </ul>
+    <div class="stack">
+      <span class="tag">TypeScript</span><span class="tag">Next.js</span><span class="tag">SQLite / SQL</span><span class="tag">Python ETL</span>
+      <span class="tag">GitHub Actions</span><span class="tag">zod</span><span class="tag">pdfkit</span><span class="tag">exceljs</span><span class="tag">1,128 tests</span>
+    </div>
+  </article>
+
+  <article class="project rv">
+    <div class="ptop">
+      <div><div class="pid">02</div><h3>EcoSetu CBAM Calculator</h3></div>
+      <span class="pill"><i></i>LIVE</span>
+    </div>
+    <div class="tagline">Free public tool for Indian exporters</div>
+    <div class="split">
+      <div>
+        <p>Calculates EU CBAM embedded emissions per tonne of product for steel, aluminium, cement, fertilisers and hydrogen, then models the indicative cost.</p>
+        <ul>
+          <li>Python ETL (pandas, openpyxl) loads all 256 official India default values from Implementing Regulation (EU) 2025/2621, reconciled to zero missing and zero extra.</li>
+          <li>Updated within a month of the EU&rsquo;s July 2026 correction (Reg. (EU) 2026/1740): mark-ups computed in code and reconciled against the Commission&rsquo;s earlier figures, and users&rsquo; saved files kept working.</li>
+          <li>Pure-Python engine protected by 47 automated tests, including worked examples such as BF-BOF steel at 2.181 tCO2e/t.</li>
+          <li>Indicative costs under EU ETS prices of &euro;40&ndash;&euro;100 and the 2026&ndash;2034 phase-in; privacy-first, with no login or database.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="glyph">
+          <div class="gl"><span>official India default values</span><b>256 / 256</b></div>
+          <div class="gbar"><i></i></div>
+          <div class="ticks"><span><b>256</b> loaded</span><span><b>0</b> missing</span><span><b>0</b> extra</span><span><b>SHA-256</b> ok</span></div>
+        </div>
+        <div class="glyph">
+          <div class="gl"><span>engine test suite</span><b>47 passed</b></div>
+          <div class="gbar"><i></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="stack">
+      <span class="tag">Python</span><span class="tag">pandas</span><span class="tag">openpyxl</span><span class="tag">pytest</span><span class="tag">Streamlit</span><span class="tag">fpdf2</span>
+    </div>
+    <div class="plinks"><a href="https://ecosetucbam.streamlit.app" target="_blank" rel="noopener">Open the live tool</a></div>
+  </article>
+
+  <article class="project rv">
+    <div class="ptop">
+      <div><div class="pid">03</div><h3>EcoSetu BRSR Platform</h3></div>
+      <span class="pill"><i></i>LIVE</span>
+    </div>
+    <div class="tagline">Free BRSR reporting tool for Indian MSMEs</div>
+    <div class="split">
+      <div>
+        <p>Turns MSME operating data into bank- and audit-ready BRSR reports across all nine NGRBC principles in under an hour.</p>
+        <ul>
+          <li>GHG accounting engine (Scope 1 &amp; 2) on CEA V21.0 grid emission factors and IPCC conversion constants, with a published, source-cited methodology.</li>
+          <li>Tier-aware scoring for Micro, Small and Medium enterprises: automated ESG scores and energy, water and emissions-intensity metrics.</li>
+          <li>Reconciliation warnings when component figures do not add up to reported totals.</li>
+          <li>Automated PDF reports (fpdf2), deployed on Streamlit Cloud with version control on GitHub.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="glyph">
+          <div class="gl"><span>NGRBC principles covered</span><b>9 / 9</b></div>
+          <div class="blocks" aria-hidden="true"><i>P1</i><i>P2</i><i>P3</i><i>P4</i><i>P5</i><i>P6</i><i>P7</i><i>P8</i><i>P9</i></div>
+        </div>
+        <div class="glyph">
+          <div class="gl"><span>Founding 100 early-adopter programme</span><b>55 signed up</b></div>
+          <div class="gbar" style="--to:.55"><i></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="stack">
+      <span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">pandas</span><span class="tag">fpdf2</span><span class="tag">Pillow</span><span class="tag">CEA V21.0</span>
+    </div>
+    <div class="plinks"><a href="https://brsr-tool-msme.streamlit.app" target="_blank" rel="noopener">Open the live tool</a></div>
+  </article>
+</div></section>
+
+<section id="method"><div class="wrap">
+  <div class="axis rv"><b>// 02</b> method</div>
+  <h2 class="rv">Four rules I build by</h2>
+  <p class="sec-intro rv">Carbon figures get questioned months after they are filed. These rules are how a number survives that.</p>
+  <div class="flow">
+    <div class="step rv"><div class="num">01</div><h4>Trace every figure</h4><p>Each number keeps its source and its history: what changed, who approved it, and why.</p></div>
+    <div class="step rv"><div class="num">02</div><h4>Calculate it twice</h4><p>An independent second method checks the result. If the two disagree, the export stops instead of shipping a wrong number.</p></div>
+    <div class="step rv"><div class="num">03</div><h4>Version the rules</h4><p>Regulations change. Results stay tied to the rules that produced them, so last year&rsquo;s figure can still be explained.</p></div>
+    <div class="step rv"><div class="num">04</div><h4>Test before trusting</h4><p>Automated tests reproduce worked examples, so a change that moves a number is caught before anyone relies on it.</p></div>
+  </div>
+</div></section>
+
+<section id="toolkit"><div class="wrap">
+  <div class="axis rv"><b>// 03</b> toolkit</div>
+  <h2 class="rv">Toolkit</h2>
+  <div class="kit rv">
+    <div class="kk">Programming &amp; databases</div>
+    <div class="kv"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">SQLite</span><span class="tag">TypeScript</span><span class="tag">Git</span></div>
+    <div class="kk">Python libraries</div>
+    <div class="kv"><span class="tag">pandas</span><span class="tag">openpyxl</span><span class="tag">pytest</span><span class="tag">Streamlit</span><span class="tag">fpdf2</span><span class="tag">Pillow</span></div>
+    <div class="kk">Analytics &amp; BI</div>
+    <div class="kv"><span class="tag">Excel (advanced)</span><span class="tag">Power BI</span><span class="tag">KPI &amp; MIS reporting</span><span class="tag">Data visualisation</span></div>
+    <div class="kk">Data engineering</div>
+    <div class="kv"><span class="tag">ETL pipelines</span><span class="tag">Data modelling</span><span class="tag">Validation</span><span class="tag">Reconciliation</span><span class="tag">Audit trails</span><span class="tag">CI (GitHub Actions)</span></div>
+    <div class="kk">Carbon &amp; ESG</div>
+    <div class="kv"><span class="tag">EU CBAM (SEE)</span><span class="tag">GHG Protocol</span><span class="tag">CEA &amp; IPCC factors</span><span class="tag">SEBI BRSR</span><span class="tag">GRI</span><span class="tag">SASB</span><span class="tag">TCFD</span><span class="tag">ISSB</span></div>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <div class="axis rv"><b>// 04</b> experience</div>
+  <h2 class="rv">Experience &amp; education</h2>
+  <div class="xgrid">
+    <div class="tl rv">
+      <div class="tli">
+        <div class="tld">Jan 2026 &ndash; present &middot; part-time, hybrid</div>
+        <div class="tlr">CBAM, ESG &amp; Sustainability Consultant</div>
+        <div class="tlo">EcoSetu ESG &amp; CBAM</div>
+        <p>Data and software delivery for CBAM and ESG reporting. Built the platform and both tools above.</p>
+      </div>
+      <div class="tli">
+        <div class="tld">Jan 2023 &ndash; Apr 2026</div>
+        <div class="tlr">Compliance &amp; Operations Manager</div>
+        <div class="tlo">Entain, London</div>
+        <p>MIS reports and KPI dashboards tracking 10+ metrics, Power BI analysis, 100% audit compliance, and a team of 12+ across two units.</p>
+      </div>
+      <div class="tli">
+        <div class="tld">Mar 2021 &ndash; Dec 2022</div>
+        <div class="tlr">Proprietor &amp; Export Operations Manager</div>
+        <div class="tlo">Keprin Overseas Corporation, Bhavnagar</div>
+        <p>Agricultural-commodity exports to Nepal and Indonesia: contracts, trade documentation and customs compliance.</p>
+      </div>
+    </div>
+    <div class="facts rv">
+      <h4>Education &amp; certifications</h4>
+      <div class="row"><div class="v">Certified ESG Professional &middot; <span class="gold">Gold Medalist</span></div><div class="k">IIM Bangalore &middot; 2026</div></div>
+      <div class="row"><div class="v">MSc International Business</div><div class="k">Birkbeck, University of London &middot; 2024</div></div>
+      <div class="row"><div class="v">B.Tech, Civil Engineering</div><div class="k">IITRAM, Ahmedabad &middot; 2021</div></div>
+      <div class="row"><div class="v">Data Science, AI &amp; Generative AI</div><div class="k">Jason School, Pune &middot; expected Nov 2026</div></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div class="status rv"><i aria-hidden="true"></i>Open to ESG and climate data roles</div>
+  <h2 class="rv">Hiring for ESG or climate data?</h2>
+  <p class="rv">I am open to ESG data, climate data and sustainability analytics roles in India, and open to relocation. Email is the fastest way to reach me.</p>
+  <div class="hero-cta rv">
+    <a class="btn btn-primary" href="mailto:meet.vaghani9909@gmail.com">meet.vaghani9909@gmail.com</a>
+    <a class="btn btn-ghost" href="Meet_Vaghani_CV_Data_Analyst.pdf" target="_blank" rel="noopener">Download CV</a>
+    <a class="btn btn-ghost" href="https://www.linkedin.com/in/meetvaghani" target="_blank" rel="noopener">LinkedIn &#8599;</a>
+  </div>
+  <div class="cdetails rv"><a href="tel:+919409417490">+91 94094 17490</a><span>Bhavnagar, India</span></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="foot-rule"></div>
+  <div class="foot-base">
+    <span>&copy; 2026 Meet Vaghani</span>
+    <a href="../">Consulting work: the EcoSetu catalogue &#8599;</a>
+    <a href="#top">Back to top &#8593;</a>
+  </div>
+</div></footer>
+
+<script>
+(function(){
+  var RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* scroll progress */
+  var prog = document.getElementById('prog');
+  function onScroll(){
+    var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
+    prog.style.transform = 'scaleX(' + (max > 0 ? h.scrollTop / max : 0) + ')';
+  }
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  /* reveals + counters */
+  var fmt = function(n){ return n.toLocaleString('en-GB'); };
+  var counted = new WeakSet();
+  function count(el){
+    if (counted.has(el)) return; counted.add(el);
+    var target = parseInt(el.dataset.count, 10);
+    if (RM){ el.textContent = fmt(target); return; }
+    var dur = 900, t0 = null;
+    function step(ts){
+      if (!t0) t0 = ts;
+      var p = Math.min((ts - t0) / dur, 1);
+      el.textContent = fmt(Math.round(target * (0.5 - 0.5 * Math.cos(Math.PI * p))));
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+    /* a throttled or background tab can stall animation frames: always land on the exact figure */
+    setTimeout(function(){ el.textContent = fmt(target); }, dur + 150);
+  }
+  var reveal = function(el){ el.classList.add('in'); el.querySelectorAll('[data-count]').forEach(count); };
+  if (RM || !('IntersectionObserver' in window)){
+    document.querySelectorAll('.rv').forEach(reveal);
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting){ reveal(e.target); io.unobserve(e.target); } });
+    }, {threshold: 0, rootMargin: '0px 0px -40px 0px'});  /* tall cards on phones reveal on entry, not at 15% */
+    document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+  }
+  /* print: show everything */
+  addEventListener('beforeprint', function(){ document.querySelectorAll('.rv').forEach(reveal); });
+
+  /* terminal: real command output, typed */
+  var LINES = [
+    ['p', '$ npm test', 'c', '            # CBAM monitoring platform'],
+    ['o', 'ℹ tests 1128'],
+    ['s', 'ℹ pass 1128'],
+    ['o', 'ℹ fail 0'],
+    ['o', ''],
+    ['p', '$ pytest -q', 'c', '           # CBAM calculator engine'],
+    ['s', '47 passed in 0.03s'],
+    ['o', ''],
+    ['p', '$ shasum -a 256 india_cbam_defaults.csv'],
+    ['n', '5189d8b4…40be6656'],
+    ['c', '# matches the stored checksum: data unchanged']
+  ];
+  var out = document.getElementById('tout');
+  function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;'); }
+  function lineHTML(l){
+    var h = '<span class="' + l[0] + '">' + esc(l[1]) + '</span>';
+    if (l[2]) h += '<span class="' + l[2] + '">' + esc(l[3]) + '</span>';
+    return h;
+  }
+  if (RM){ out.innerHTML = LINES.map(lineHTML).join('\n'); return; }
+  var done = [], i = 0;
+  function render(partial){ out.innerHTML = done.join('\n') + (done.length ? '\n' : '') + partial + '<span class="caret"></span>'; }
+  function next(){
+    if (i >= LINES.length){ render(''); return; }
+    var l = LINES[i];
+    if (l[0] !== 'p'){ done.push(lineHTML(l)); i++; render(''); setTimeout(next, l[1] ? 140 : 60); return; }
+    var cmd = l[1], k = 0;
+    (function type(){
+      k++;
+      render('<span class="p">' + esc(cmd.slice(0, k)) + '</span>');
+      if (k < cmd.length) setTimeout(type, 28 + Math.random() * 40);
+      else { done.push(lineHTML(l)); i++; setTimeout(next, 380); }
+    })();
+  }
+  setTimeout(next, 500);
+})();
+</script>
+</body>
+</html>
