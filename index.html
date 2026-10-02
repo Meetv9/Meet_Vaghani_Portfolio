@@ -172,6 +172,16 @@
           margin-right:5px;animation:pulse 2s ease-in-out infinite}
   .pill.sim{background:rgba(59,82,139,.12);color:var(--v-blue)}
   .pill.sim i{background:var(--v-blue);animation:none}
+  .pill.client{background:rgba(33,145,140,.13);color:#1a7a72}
+  .pill.client i{background:var(--v-teal);animation:none}
+  .demo{margin:18px 0 6px}
+  .demo video{display:block;width:100%;aspect-ratio:16/9;border-radius:10px;background:#0b1110;
+              box-shadow:0 16px 38px rgba(16,22,20,.20);border:1px solid #1d2a27}
+  .demo figcaption{display:flex;justify-content:space-between;gap:6px 16px;flex-wrap:wrap;margin-top:9px;
+                   font-family:"IBM Plex Mono";font-size:.68rem;color:var(--faint)}
+  .demo figcaption span:first-child{color:var(--v-teal);font-weight:600}
+  .project p.extends{font-size:.9rem;margin-top:14px;padding-left:14px;border-left:2px solid var(--v-green)}
+  .project .sfoot{margin-top:18px}
   .simnote{font-family:"IBM Plex Mono";font-size:.66rem;color:var(--faint);margin:2px 0 12px;letter-spacing:.02em}
   @keyframes pulse{50%{opacity:.35}}
   .tagline{color:var(--v-blue);font-weight:600;font-size:.95rem;margin:4px 0 14px}
@@ -568,12 +578,30 @@
   <!-- LINE 03 -->
   <div class="svc-line rv">
     <div class="lhead">03 · ESG software &amp; data engineering</div>
-    <p class="lintro">I build the tools, not only the reports. The CBAM calculator and BRSR platform in the work below are mine, end to end.</p>
+    <p class="lintro">I build the tools, not only the reports. The client platform, CBAM calculator and BRSR tool in the work below are mine, end to end.</p>
     <div class="smenu">
 
       <details class="srow">
         <summary>
           <div class="sidx">01</div>
+          <div class="smain">
+            <div class="sname">Custom CBAM Platform or Portal</div>
+            <div class="sone">A full monitoring and reporting system for an industry association, a government body or a multi-plant company, in any CBAM sector. The platform in the work below is one we built this way.</div>
+          </div>
+          <div class="smeta2"><span class="chip">scoped per build</span><span class="exp">+</span></div>
+        </summary>
+        <div class="sbody">
+          <div class="bk">You get</div>
+          <p class="sfor">Plant or member onboarding, monthly data capture with evidence, a calculation engine with an independent cross-check, approval workflows, an audit trail, verifier and declarant packs, and the source code, built around your rules and your data.</p>
+          <div class="bk" style="margin-top:12px">Right for</div>
+          <p class="sfor">Industry associations and government bodies building sector-wide CBAM capacity, and companies running several plants.</p>
+          <div class="sfoot"><a class="scta" href="#contact" data-svc="Custom CBAM Platform or Portal">Start a project</a><div class="plinks"><a href="#platform">watch the platform walkthrough</a></div></div>
+        </div>
+      </details>
+
+      <details class="srow">
+        <summary>
+          <div class="sidx">02</div>
           <div class="smain">
             <div class="sname">ESG Dashboard Build</div>
             <div class="sone">One live dashboard that pulls your ESG data out of scattered spreadsheets into something your team can actually use.</div>
@@ -591,7 +619,7 @@
 
       <details class="srow">
         <summary>
-          <div class="sidx">02</div>
+          <div class="sidx">03</div>
           <div class="smain">
             <div class="sname">Calculation Engine or Bespoke Tool</div>
             <div class="sone">A custom calculator or compliance engine, built to your rules. The CBAM app below is one I built this way.</div>
@@ -609,7 +637,7 @@
 
       <details class="srow">
         <summary>
-          <div class="sidx">03</div>
+          <div class="sidx">04</div>
           <div class="smain">
             <div class="sname">Data Pipeline &amp; Integration</div>
             <div class="sone">Automated collection and cleanup of the sustainability data you re-key by hand every quarter.</div>
@@ -650,12 +678,42 @@
 <section id="work"><div class="wrap">
   <div class="axis rv"><b>// 02</b> selected work</div>
   <h2 class="rv">Work you can inspect</h2>
-  <p class="sec-intro rv d1">Two kinds of proof. Software you can open and click right now, and CBAM engagement examples with the full method written up. They are samples of what I do, not the whole of it. Most client work stays private.</p>
+  <p class="sec-intro rv d1">Three kinds of proof. A platform we built for a client that you can watch end to end, software you can open and click right now, and CBAM engagement examples with the full method written up. They are samples of what I do, not the whole of it. Most client work stays private.</p>
+
+  <!-- Client platform -->
+  <article class="project rv" id="platform">
+    <div class="ptop">
+      <div><div class="pid">PROJ-01 · 2026</div><h3>CBAM Monitoring &amp; Reporting Platform</h3></div>
+      <span class="pill client"><i></i>CLIENT BUILD</span>
+    </div>
+    <div class="tagline">Monthly plant data in. A CBAM figure built to stand up to a verifier's review, with the evidence behind it.</div>
+    <p>We recently built this platform for a client. Plants enter their monthly production, fuel and electricity data, and the platform calculates embedded emissions as the figures go in, checks each one against documents, meters and physical balances, and produces the packs an accredited verifier and an EU declarant need.</p>
+    <figure class="demo">
+      <video controls preload="none" playsinline poster="data/cbam-platform-walkthrough-poster.jpg"
+             aria-label="Walkthrough of the CBAM monitoring and reporting platform, 3 minutes 48 seconds, using modelled demo data">
+        <source src="data/cbam-platform-walkthrough.mp4" type="video/mp4">
+        Your browser cannot play this video. <a href="data/cbam-platform-walkthrough.mp4">Download the walkthrough (MP4)</a>.
+      </video>
+      <figcaption><span>&#9654; Full walkthrough, 3 min 48 s, with music</span><span>Modelled demo data · client details confidential</span></figcaption>
+    </figure>
+    <ul>
+      <li>Emissions recalculated live as figures are entered, and every saved month kept as a new version</li>
+      <li>A monthly evidence checklist: upload the missing document and the gap closes on screen</li>
+      <li>A meter and calibration register, physical balance checks and a second, independent calculation engine</li>
+      <li>One person submits, another approves, with an append-only audit trail and signed, encrypted year-end snapshots</li>
+    </ul>
+    <p class="extends">Shown here for a cement plant. The same architecture extends to every CBAM sector: iron and steel, aluminium, fertilisers, hydrogen and electricity, and the downstream steel and aluminium goods the EU has proposed adding.</p>
+    <div class="stack">
+      <span class="tag">TypeScript</span><span class="tag">Next.js</span><span class="tag">SQLite / SQL</span>
+      <span class="tag">Python ETL</span><span class="tag">GitHub Actions CI</span><span class="tag">1,100+ automated tests</span>
+    </div>
+    <div class="sfoot"><a class="scta" href="#contact" data-svc="Custom CBAM Platform or Portal">Commission a platform like this</a></div>
+  </article>
 
   <!-- CBAM -->
   <article class="project rv tilt">
     <div class="ptop">
-      <div><div class="pid">PROJ-01 · 2026</div><h3>EcoSetu CBAM — SEE Calculator</h3></div>
+      <div><div class="pid">PROJ-02 · 2026</div><h3>EcoSetu CBAM — SEE Calculator</h3></div>
       <span class="pill"><i></i>LIVE</span>
     </div>
     <div class="tagline">Know your EU carbon number before your buyer asks.</div>
@@ -683,7 +741,7 @@
   <!-- BRSR -->
   <article class="project rv tilt">
     <div class="ptop">
-      <div><div class="pid">PROJ-02 · 2026</div><h3>EcoSetu BRSR — Reporting Platform</h3></div>
+      <div><div class="pid">PROJ-03 · 2026</div><h3>EcoSetu BRSR — Reporting Platform</h3></div>
       <span class="pill"><i></i>LIVE</span>
     </div>
     <div class="tagline">Green compliance, bridged — for Indian MSMEs.</div>
@@ -830,6 +888,7 @@
     <div class="fcol">
       <h5>Group &amp; tools</h5>
       <a href="https://kepringroup.com" target="_blank" rel="noopener">Keprin Group &#8599;</a>
+      <a href="#platform">Platform walkthrough</a>
       <a href="https://ecosetucbam.streamlit.app" target="_blank" rel="noopener">CBAM calculator</a>
       <a href="https://brsr-tool-msme.streamlit.app" target="_blank" rel="noopener">BRSR tool</a>
     </div>
